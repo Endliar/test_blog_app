@@ -22,5 +22,8 @@ namespace test_blog_app.Models
         [DataType(DataType.Password)]
         [Compare("Password", ErrorMessage = "The password and confirmation do not match")]
         public string ConfirmPassword { get; set;}
+
+        [DataType(DataType.Date)]
+        public DateTime DateOfBirth { get; set;}
     }
  }
