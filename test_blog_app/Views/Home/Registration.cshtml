@@ -1,0 +1,33 @@
+﻿@using test_blog_app.UserEnum;
+@model User
+
+@{
+    ViewBag.Title = "Registration Form";
+}
+
+<form asp-controller="Home" asp-action="Registration" method="post">
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+    </div>
+    <div>
+        <label asp-for="RegAs"></label>
+        <select asp-for="RegAs" asp-items="Html.GetEnumSelectList<Post>()"></select>
+    </div>
+    <div>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" />
+    </div>
+    <div>
+        <label asp-for="Password"></label>
+        <input asp-for="Password" />
+    </div>
+    <div>
+        <label asp-for="ConfirmPassword"></label>
+        <input asp-for="ConfirmPassword" />
+        <span asp-validation-for="ConfirmPassword"></span>
+    </div>
+    <div>
+        <button type="submit">Register</button>
+    </div>
+</form>
