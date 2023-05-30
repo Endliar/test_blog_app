@@ -1,5 +1,4 @@
-﻿@using test_blog_app.UserEnum;
-@model User
+﻿@model User
 
 @{
     ViewBag.Title = "Registration Form";
@@ -9,10 +8,6 @@
     <div>
         <label asp-for="Name"></label>
         <input asp-for="Name" />
-    </div>
-    <div>
-        <label asp-for="RegAs"></label>
-        <select asp-for="RegAs" asp-items="Html.GetEnumSelectList<Post>()"></select>
     </div>
     <div>
         <label asp-for="Email"></label>
