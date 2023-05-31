@@ -18,8 +18,8 @@ options.UseNpgsql(builder.Configuration.GetConnectionString("SecurityDb")));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
  builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
 .AddEntityFrameworkStores<ApplicationDbContext>();
-
 builder.Services.AddControllersWithViews();
+
 builder.Services.AddDbContext<UserDataContext>(o => o.UseNpgsql(builder.Configuration.GetConnectionString("SecurityDb")));
 
 var app = builder.Build();
