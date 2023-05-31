@@ -1,0 +1,16 @@
+﻿@model User
+
+@{
+    ViewBag.Title = "Registration Form";
+}
+
+<form asp-controller="Home" asp-action="Registration" method="post">
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+    </div>
+    <div>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" />
+    </div> 
+</form>
